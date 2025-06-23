@@ -1,0 +1,11 @@
+<header>
+  <nav>
+
+    {% if perms.lek5.can_publish %}
+        <a href="{% url 'restricted' %}">Articles</a>
+    {% else %}
+        <p>Nemáte oprávnenie publikovať články.</p>
+    {% endif %}
+
+  </nav>
+</header>

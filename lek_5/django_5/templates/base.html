@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Moje stránka{% endblock %}</title>
+</head>
+<body>
+    <nav>
+        <a href="{% url 'home' %}">Domů</a> |
+        <a href="{% url 'about' %}">O nás</a> |
+        <a href="{% url 'contact' %}">Kontakt</a>
+    </nav>
+    <hr>
+
+    {% block content %}
+    <!-- Obsah jednotlivých stránek -->
+    {% endblock %}
+</body>
+</html>
